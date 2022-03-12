@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Hubballi', cursive;
+    color:#1d2f41;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -8,6 +9,7 @@ body {
 
 h1 {
     font-size: 60px;
+    color: #47739e;
 }
 
 h2 {
@@ -20,7 +22,9 @@ p {
 
 .container {
     text-align: center;
-    background-color: rgb(230, 230, 230);
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     max-width: 800px;
     margin: 0 auto;
     border-radius: 3px;
@@ -33,11 +37,17 @@ p {
 }
 
 .player-dice {
+    color: black;
     background-color: rgb(114, 114, 114);
     padding: 25px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 5px;
     margin: 0;
+}
+
+.active {
+    display: block;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 .roll-btn {
@@ -49,4 +59,11 @@ p {
     border-radius: 3px;
     border: none;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition: 0.3s;
+}
+
+.roll-btn:hover, 
+.roll-btn:focus {
+    background-color: #1d2f41;
+    color: #47739e;
 }
