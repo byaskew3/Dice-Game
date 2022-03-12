@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Hubballi', cursive;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 36px;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.scoreboard, .dice-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-dice {
+    background-color: rgb(114, 114, 114);
+    padding: 25px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.roll-btn {
+    cursor: pointer;
+    padding: 20px 50px;
+    margin: 40px 0;
+    font-size: 36px;
+    font-family: 'Hubballi', cursive;
+    border-radius: 3px;
+    border: none;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
