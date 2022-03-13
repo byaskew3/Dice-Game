@@ -31,16 +31,34 @@ p {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.message {
+    margin: 0 auto;
+    max-width: 300px;
+    color: #1d2f41;
+    background-color: #47739e;
+    padding: 10px 25px;
+    border-radius: 3px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.player-1-score, .player-2-score, h1 {
+    background-color: #1d2f41;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 10px 25px;
+    color: #47739e;
+    border-radius: 3px;
+}
+
 .scoreboard, .dice-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .player-dice {
-    color: black;
-    background-color: rgb(114, 114, 114);
+    color: #88b7e6;
+    background-color: #47739e;
     padding: 25px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(29, 47, 65, 0.17) 0px -23px 25px 0px inset, rgba(29, 47, 65, 0.15) 0px -36px 30px 0px inset, rgba(29, 47, 65, 0.1) 0px -79px 40px 0px inset, rgba(29, 47, 65, 0.06) 0px 2px 1px, rgba(29, 47, 65, 0.09) 0px 4px 2px, rgba(29, 47, 65, 0.09) 0px 8px 4px, rgba(29, 47, 65, 0.09) 0px 16px 8px, rgba(29, 47, 65, 0.09) 0px 32px 16px;
     border-radius: 5px;
     margin: 0;
 }
