@@ -71,7 +71,7 @@ span {
     border: 3px solid rgb(0, 0, 0);
 }
 
-.roll-btn, .reset-btn {
+.roll-btn, .reset-btn, .first-roll-btn, .start-game-btn {
     cursor: pointer;
     background-color: #47739e;
     color: #88b7e6;
@@ -89,6 +89,10 @@ span {
 .roll-btn:focus {
     background-color: #1d2f41;
     color: #47739e;
+}
+
+.roll-btn, .start-game-btn {
+    display: none;
 }
 
 .reset-btn {
