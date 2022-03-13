@@ -20,6 +20,10 @@ p {
     font-size: 36px;
 }
 
+span {
+    font-size: 24px;
+}
+
 .container {
     text-align: center;
     background: #bdc3c7;  /* fallback for old browsers */
@@ -64,14 +68,15 @@ p {
 }
 
 .active {
-    display: block;
     border: 3px solid rgb(0, 0, 0);
 }
 
-.roll-btn {
+.roll-btn, .reset-btn {
     cursor: pointer;
+    background-color: #47739e;
+    color: #88b7e6;
     padding: 20px 50px;
-    margin: 40px 0;
+    margin: 40px auto;
     font-size: 36px;
     font-family: 'Hubballi', cursive;
     border-radius: 3px;
@@ -84,4 +89,10 @@ p {
 .roll-btn:focus {
     background-color: #1d2f41;
     color: #47739e;
+}
+
+.reset-btn {
+    display: none;
+    color: #47739e;
+    background-color: #88b7e6;
 }
