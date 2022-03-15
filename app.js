@@ -12,38 +12,38 @@ const resetBtn = document.querySelector('.reset-btn')
 let player1 = 0;
 let player2 = 0;
 let player1turn = true;
-let headsTails = 0;
+let turns = 0;
 let messageReq = `<br><span>(20 points wins the game)</span>`;
 
 
 function firstRoll() {
-    let turns = 0;
-    let bothPlayersRolled = false;
     message.textContent = 'Roll to determine first possession'
     message.style.fontSize = '30px';
     player1score.textContent = 'Player 1'
     player1dice.classList.add('active')
     player2score.textContent = 'Player 2'
-    firstRollbtn.addEventListener('click', function() {
-        let num = Math.floor ( Math.random() * 100) + 1;
-        if (player1turn) {
-            player1 = num;
-            player1dice.textContent = player1;
-            player1dice.classList.remove('active');
-            player2dice.classList.add('active')
-        } else {
-            player2 = num;
-            player2dice.textContent = player2;
-            player2dice.classList.remove('active');
-            player1dice.classList.add('active')
-        }
-        turns++;
-        player1turn = !player1turn;
-        if (turns === 2) {
-            bothPlayersRolled = true;
-            checker()
-        }
-    })
+}
+
+function playerRollsFirst() {
+    let bothPlayersRolled = false;
+    let num = Math.floor ( Math.random() * 100) + 1;
+    if (player1turn) {
+        player1 = num;
+        player1dice.textContent = player1;
+        player1dice.classList.remove('active');
+        player2dice.classList.add('active')
+    } else {
+        player2 = num;
+        player2dice.textContent = player2;
+        player2dice.classList.remove('active');
+        player1dice.classList.add('active')
+    }
+    turns++;
+    player1turn = !player1turn;
+    if (turns === 2) {
+        bothPlayersRolled = true;
+        checker()
+    }
 }
 
 function checker() {
@@ -81,9 +81,6 @@ function startGame() {
     }
 }
 
-startGameBtn.addEventListener('click', startGame)
-
-
 function diceNumber() {
     let num = Math.floor ( Math.random() * 6) + 1;
     subMessage.textContent = '';
@@ -91,15 +88,19 @@ function diceNumber() {
         player1 += num;
         message.textContent = 'Player 2 Turn'
         message.innerHTML +=  messageReq;
-        player1dice.textContent = player1;
+        player1dice.textContent = num;
+        player1score.textContent = `Score: ${player1}`;
         player1dice.classList.remove('active');
+        player2dice.textContent = '-'
         player2dice.classList.add('active')
     } else {
         player2 += num;
         message.textContent = 'Player 1 Turn'
         message.innerHTML +=  messageReq;
-        player2dice.textContent = player2;
+        player2dice.textContent = num;
+        player2score.textContent = `Score: ${player2}`;
         player2dice.classList.remove('active');
+        player1dice.textContent = '-'
         player1dice.classList.add('active')
     }
     
@@ -118,7 +119,25 @@ function endGame() {
     rollBtn.style.display = 'none';
     resetBtn.style.display = 'inline-block';
 }
-resetBtn.addEventListener('click', firstRoll)
+
+function resetGame() {
+    player1 = 0;
+    player2 = 0;
+    player1turn = true;
+    turns = 0;
+    player1dice.textContent = '-';
+    player2dice.textContent = '-';
+    player2dice.classList.remove('active');
+    resetBtn.style.display = 'none';
+    firstRollbtn.style.display = 'inline-block';
+    firstRoll()
+}
+
+firstRollbtn.addEventListener('click', playerRollsFirst)
+
+startGameBtn.addEventListener('click', startGame)
+
+resetBtn.addEventListener('click', resetGame)
 
 rollBtn.addEventListener('click', diceNumber)
 
